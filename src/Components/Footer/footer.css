@@ -1,0 +1,23 @@
+.footer_main{
+    background-color: rgb(12, 12, 12);
+    height: 25vh;
+    color: #fff;
+    /* display: flex; */
+    /* align-content: center; */
+    text-align: center;
+}
+.credits{
+    justify-content: space-between;
+    
+
+}
+.link_name{
+    color: red;
+    font-weight: 700 ;
+    text-decoration: none;
+}
+.last_text{
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 36px;
+}
