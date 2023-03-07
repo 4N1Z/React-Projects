@@ -17,7 +17,7 @@ function NavBar() {
           
           alert("Feature CommingSoon")
          }} class="fa-solid fa-magnifying-glass"></i>
-         {/* <form action="#" onSubmit={(e) => e.preventDefault()} ></form> */}
+         
 
          <input 
          className='search_box'

@@ -20,6 +20,7 @@
     cursor: pointer;
     max-height: 300px;
     margin-right: 10px;
+    transition: 1s;
 
 }
 .post_small{
@@ -35,16 +36,20 @@
 }
 
 .posters:hover{
+    
     transform: scale(1.04);
+    transition: 1s;
 
 }
 
 .Poster:hover{
     transform :scale(1.2);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, .8);    
+    transition: 1s;
 }
 
 .post_small:hover{
     transform: scale(1.2);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, .8);
+    transition: 1s;
 }

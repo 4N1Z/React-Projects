@@ -5,7 +5,6 @@ import axios from "../../axios";
 import { imageURL, API_key } from "../../constants/constants";
 import YouTube from "react-youtube";
 
-
 function Row_post(props) {
   //creating an empty array bcuz , while mapping whwn a null obj is mapped it throws error
 
@@ -36,28 +35,28 @@ function Row_post(props) {
   //we get the movie id whenn we click, using obj.id
 
   const handleMovieTrailer = (id) => {
-
     if (id != null) {
-      axios.get(`movie/${id}/videos?api_key=${API_key}&language=en-US`)
+      axios
+        .get(`movie/${id}/videos?api_key=${API_key}&language=en-US`)
         .then((response) => {
           // console.log(response.data)
           if (response.data.results.length != 0) {
             seturlId(response.data.results[0]);
           } else {
-            console.log("Array Empty")
-            alert(`Trailer not found`)
-            setShowTrailer(false)
+            console.log("Array Empty");
+            alert(`Trailer not found`);
+            setShowTrailer(false);
           }
-        })
+        });
     } else {
       console.log("nothing");
-      setShowTrailer(false)
+      setShowTrailer(false);
     }
-    return true
-   
+    return true;
+
     // console.log('But Why ! ')
   };
-  
+
   return (
     <div className="row">
       <br />
@@ -65,17 +64,15 @@ function Row_post(props) {
       <br />
 
       <div className="posters">
-      
         {movie.map((obj) => (
-          <img onClick={() => {
-
-              setShowTrailer(
-                (!showTrailer) ? handleMovieTrailer(obj.id) : null);
+          <img
+            onClick={() => {
+              setShowTrailer(!showTrailer ? handleMovieTrailer(obj.id) : null);
             }}
-            
             className={props.isSmall ? "post_small" : "Poster"}
             src={`${imageURL + obj.poster_path}`}
-            alt="Poster"/>
+            alt="Poster"
+          />
         ))}
 
         {/* {showTrailer ? <h1>Trailer showing</h1> : null} */}
